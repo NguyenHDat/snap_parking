@@ -10,9 +10,9 @@ import {
   } from 'react-native';
 
 import CircleTransition from 'react-native-expanding-circle-transition';
-const ANIMATION_DURATION = 1200
-const INITIAL_VIEW_BACKGROUND_COLOR = '#fff'
-const CIRCLE_COLOR1 = '#00B8D4'
+const ANIMATION_DURATION = 1000
+const INITIAL_VIEW_BACKGROUND_COLOR = '#eeeeee'
+const CIRCLE_COLOR1 = 'rgba(0, 173, 181, 0.5)'
 // const CIRCLE_COLOR1 = '#008080'
 const TRANSITION_BUFFER = 10
 const POSITON = 'topLeft'
@@ -48,7 +48,7 @@ export default class SplashScreen extends React.Component {
     onLoad = () => {
       Animated.timing(this.state.opacity, {
         toValue: 1,
-        duration: 3000,
+        duration: 2000,
         useNativeDriver: true,
       }).start();
     }
@@ -124,7 +124,7 @@ export default class SplashScreen extends React.Component {
                       this.props.style,
                       styles.titleText
                     ]}
-                    ><Text>SNAP PARKING</Text></Animated.Text>
+                    ><Text>SMART PARKING</Text></Animated.Text>
               </View>
               <CircleTransition
                 ref={(circle) => { this.circleTransition = circle }}

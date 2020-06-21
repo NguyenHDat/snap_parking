@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "SnapParking",
     "slug": "SnapParking_",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -24,7 +24,18 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.lvtn.snapparking",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.lvtn.snapparking",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAtnlZwhYjHybjE-4T8o5posmhDUSA4D0U"
+        }
+      }
     }
   }
 }

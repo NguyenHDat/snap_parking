@@ -1,6 +1,5 @@
 import React from 'react';
 import SplashScreen from './src/components/splashScreen/SplashScreen';
-import LoginScreen from './src/components/login/login';
 import 'react-native-gesture-handler';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
@@ -8,12 +7,12 @@ import AppNavigation from './src/navigators/Router';
 export default class Application extends React.Component {
   state = {
     fontLoaded: false,
-    view: null
+    view: null,
   };
   componentWillMount() {
-    this.state = {
+    this.setState({
         view : <SplashScreen />
-    };
+    });
     setTimeout(() => {
         //IF FALSE NAVIGATE TO ERROR
         if(true) {
@@ -25,12 +24,14 @@ export default class Application extends React.Component {
                //  view : <Error/>
             })
         }
-    }, 5000) //TIME OF WAITING
+    }, 3000) //TIME OF WAITING
   }
   async componentDidMount() {
     await Font.loadAsync({
       'VoltaireRegular': require('./src/assets/fonts/Voltaire-Regular.ttf'),
-      'UTMSeagull': require('./src/assets/fonts/UTM-SeagullBold.ttf')
+      'UTMSeagull': require('./src/assets/fonts/UTM-SeagullBold.ttf'),
+      'UTM-Swiss-Condensed': require('./src/assets/fonts/UTM-Swiss-Condensed.ttf'),
+      'UTM-Swiss-CondensedBold': require('./src/assets/fonts/UTM-Swiss-CondensedBold.ttf'),
     });
 
     this.setState({ fontLoaded: true });

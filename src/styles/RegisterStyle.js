@@ -81,7 +81,8 @@ export default {
         fontFamily: 'VoltaireRegular',
     },
     signUpView: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginBottom: 16
     },
     signUpBtn: {
         backgroundColor: '#008080',
